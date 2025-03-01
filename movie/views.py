@@ -21,6 +21,10 @@ def about(request):
     # return HttpResponse("<h1>Welcome to About Page</h1>")
     return render(request, 'about.html')
 
+def signup(request):
+    email = request.GET.get('email')
+    return render(request, 'signup.html', {'email': email})
+
 def create_graphic(movie_counts, countable):
     # Ancho de las barras
     bar_width = 0.5
